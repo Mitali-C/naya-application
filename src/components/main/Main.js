@@ -38,21 +38,44 @@ class Main extends React.Component{
   }
 
   handleContinue = () =>{
-    if(this.state.emailError.length===0 || this.state.passwordError.length===0 || this.state.confirmPasswordError.length===0){
-      localStorage.setItem("naya" , JSON.stringify(
-        {
-          "email":this.state.email,
-          "type":'',
-          "designer-capacity" : 0,
-          "designer-type": '',
-          "designer-training":'',
-          "maker-capacity":'',
-          "maker-material":[],
-          "maker-location":'',
+    if(this.state.emailError.length===0 &&
+      this.state.passwordError.length===0 &&
+      this.state.confirmPasswordError.length===0 &&
+      this.state.email.trim().length!==0 &&
+      this.state.password.trim().length!==0 &&
+      this.state.confirmPassword.trim().length!==0){
+        localStorage.setItem("naya" , JSON.stringify(
+          {
+            "email":this.state.email,
+            "type":'',
+            "designer-capacity" : 0,
+            "designer-type": '',
+            "designer-training":'',
+            "maker-capacity":'',
+            "maker-material":[],
+            "maker-location":'',
+          }
+        ))
+        window.location.href="/landing";
+      }
+      else{
+        if(this.state.emailError.length===0){
+          if(this.state.email.trim().length===0){
+            this.setState({emailError:'Email cannot be empty'})
+          }
         }
-      ))
-      window.location.href="/landing";
-    }
+        if(this.state.passwordError.length===0){
+          if(this.state.password.trim().length===0){
+            this.setState({passwordError:'Password cannot be empty'})
+          }
+        }
+        if(this.state.confirmPasswordError.length===0){
+          if(this.state.confirmPassword.trim().length===0){
+            this.setState({confirmPasswordError:'Retype the password'})
+          }
+        }
+      }
+    
   }
 
   render(){
