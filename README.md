@@ -1,4 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Application name: Naya Application (Signup and onbording UI)
+
+## Description: 
+This is an UI application developed using React JS for signup and on boarding experience for the designers and makers (developed for naya studio).
+
+### To run the application
+1. Clone the repository
+2. Install the libraries using command: 
+### `npm install`
+3. To finally run the application, use following command:
+### `npm start`
+The application will be running at http://localhost:3000/
 
 ## Available Scripts
 
