@@ -24,7 +24,6 @@ class MakerMaterial extends React.Component{
     let data = JSON.parse(localStorage.getItem("naya"));
     data["maker-material"] = this.state.materials;
     localStorage.setItem("naya", JSON.stringify(data))
-    console.log(JSON.parse(localStorage.getItem("naya")))
   }
 
   render(){

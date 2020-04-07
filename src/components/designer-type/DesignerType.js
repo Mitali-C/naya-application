@@ -23,7 +23,6 @@ class DesignerType extends React.Component{
     let data = JSON.parse(localStorage.getItem("naya"));
     data["designer-type"] = this.state.checked;
     localStorage.setItem("naya", JSON.stringify(data))
-    console.log(JSON.parse(localStorage.getItem("naya")))
   }
 
   render(){

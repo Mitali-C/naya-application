@@ -8,30 +8,30 @@ class DisplayData extends React.Component{
     data:[],
   }
   componentDidMount(){
-    this.setState({data:JSON.parse(localStorage.getItem("naya"))}, () =>{console.log(this.state.data)})
+    this.setState({data:JSON.parse(localStorage.getItem("naya"))})
   }
   render(){
     const {data} = this.state;
     return(
       <div className="details-container">
-        <h1>naya</h1>
+        <h1 style={{marginLeft:'10px'}}>naya</h1>
         <Container className={!this.props.isMobile() && "details-box"}>
           <h1>Details</h1>
           {
             data.length!==0 && (
               <>
                 <div className="title-value-container">
-                  <text className="title">Email:</text>
+                  <div className="title">Email:</div>
                   <h6 className="value">{data["email"]}</h6>
                 </div>
                 <div className="title-value-container">
-                  <text className="title">Registered as:</text>
+                  <div className="title">Registered as:</div>
                   <h6 className="value">{data["type"]}</h6>
                 </div>
                 {
                   data["designer-capacity"] !== 0 && (
                     <div className="title-value-container">
-                      <text className="title">Time you can spend on Naya projects per week:</text>
+                      <div className="title">Time you can spend on Naya projects per week:</div>
                       <h6 className="value">{data["designer-capacity"]} hours</h6>
                     </div>
                   )
@@ -39,7 +39,7 @@ class DisplayData extends React.Component{
                 {
                   data["designer-type"].length !== 0 && (
                     <div className="title-value-container">
-                      <text className="title">You are best described as:</text>
+                      <div className="title">You are best described as:</div>
                       <h6 className="value">{data["designer-type"]}</h6>
                     </div>
                   )
@@ -47,7 +47,7 @@ class DisplayData extends React.Component{
                 {
                   data["designer-training"].length !== 0 && (
                     <div className="title-value-container">
-                      <text className="title">Education level:</text>
+                      <div className="title">Education level:</div>
                       <h6 className="value">{data["designer-training"]}</h6>
                     </div>
                   )
@@ -55,7 +55,7 @@ class DisplayData extends React.Component{
                 {
                   data["maker-capacity"].length !== 0 && (
                     <div className="title-value-container">
-                      <text className="title">Average no. projects you work on every month:</text>
+                      <div className="title">Average no. projects you work on every month:</div>
                       <h6 className="value">{data["maker-capacity"]}</h6>
                     </div>
                   )
@@ -63,13 +63,13 @@ class DisplayData extends React.Component{
                 {
                   data["maker-material"].length !== 0 && (
                     <div className="title-value-container">
-                      <text className="title">Materials can you work with:</text>
+                      <div className="title">Materials can you work with:</div>
                       <ul>
                         {
                           data["maker-material"].map((material, index)=>{
                             if(material.checked){
                               return(
-                                <li><h6 className="value">{material.name}</h6></li>
+                                <li key={index}><h6 className="value">{material.name}</h6></li>
                               )
                               
                             }
@@ -82,7 +82,7 @@ class DisplayData extends React.Component{
                 {
                   data["maker-location"].length !== 0 && (
                     <div className="title-value-container">
-                      <text className="title">You are based out of:</text>
+                      <div className="title">You are based out of:</div>
                       <h6 className="value">{data["maker-location"]}</h6>
                     </div>
                   )

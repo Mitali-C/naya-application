@@ -19,7 +19,6 @@ class DesignerCapacity extends React.Component{
     let data = JSON.parse(localStorage.getItem("naya"));
     data["designer-capacity"] = this.state.capacity;
     localStorage.setItem("naya", JSON.stringify(data))
-    console.log(JSON.parse(localStorage.getItem("naya")))
   }
 
   render(){

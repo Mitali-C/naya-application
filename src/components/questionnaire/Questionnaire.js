@@ -45,7 +45,7 @@ class Questionnaire extends React.Component{
               {
                 designer.map((question, index) => (
                   <>
-                      <div key={index} className={index<=current ? "timeline-point" : "timeline-point-unfilled"}>{question.id}</div>
+                      <div className={index<=current ? "timeline-point" : "timeline-point-unfilled"}>{question.id}</div>
                       {index!==designer.length-1 && (<div className={index<=current ? "timeline-line" : "timeline-line-unfilled"}/>)}
                   </>
                 ))
