@@ -1,0 +1,26 @@
+.details-container{
+
+}
+
+.details-box{
+  width: fit-content!important;
+  padding: 10px;
+  color: #fff;
+  background-color: #000;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.title-value-container{
+  margin-bottom: 15px;
+  width: auto;
+  padding: 10px;
+  color: #fff;
+  background-color: #000;
+  margin: auto;
+}
+
+.title{
+  font-size: 15px;
+  color:#a3a3a3;
+}

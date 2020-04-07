@@ -1,0 +1,14 @@
+select {
+  width: -webkit-fill-available;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.dropdown-content{
+  width: 200px;
+}
+
+.dropdown-container{
+  margin-top: 20px;
+}
