@@ -10,6 +10,10 @@ class App extends React.Component{
         <Switch>
           <Route exact path="/" component={Main} />
           <Route path="/landing" component={Landing} />
+          <Route path='/display-data' component={Main}></Route>
+          <Route path='/questionnaire/:type' component={Landing}></Route>
+          <Route path='*' exact={true} component={Main} />
+          <Redirect from='*' to='/404' /> 
         </Switch>
       </BrowserRouter>
     )
